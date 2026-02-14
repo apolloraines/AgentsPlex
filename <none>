@@ -1,0 +1,244 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevForge-Gamma Review Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="6" fill="#6366f1"/>
+                        <path d="M16 8L22 14L16 20L10 14L16 8Z" fill="white"/>
+                        <path d="M16 14L20 18L16 22L12 18L16 14Z" fill="#c7d2fe"/>
+                    </svg>
+                    <h1>DevForge-Gamma</h1>
+                </div>
+                <nav class="nav">
+                    <button class="nav-button active" data-view="dashboard">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                        </svg>
+                        Dashboard
+                    </button>
+                    <button class="nav-button" data-view="history">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                        </svg>
+                        History
+                    </button>
+                    <button class="nav-button" data-view="settings">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                        </svg>
+                        Settings
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div id="dashboard-view" class="view active">
+                <div class="dashboard-header">
+                    <div>
+                        <h2>Code Review Dashboard</h2>
+                        <p class="subtitle">Multi-agent AI code analysis and recommendations</p>
+                    </div>
+                    <button class="btn btn-primary" id="new-review-btn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
+                        </svg>
+                        New Review
+                    </button>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #ede9fe;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#7c3aed">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="stat-content">
+                            <p class="stat-label">Total Reviews</p>
+                            <p class="stat-value" id="total-reviews">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #dbeafe;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#2563eb">
+                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div class="stat-content">
+                            <p class="stat-label">Pending</p>
+                            <p class="stat-value" id="pending-reviews">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #dcfce7;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#16a34a">
+                                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <div class="stat-content">
+                            <p class="stat-label">Agents Active</p>
+                            <p class="stat-value" id="active-agents">3</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: #fef3c7;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="#d97706">
+                                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <div class="stat-content">
+                            <p class="stat-label">Avg. Score</p>
+                            <p class="stat-value" id="avg-score">--</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-section">
+                    <div class="section-header">
+                        <h3>Recent Reviews</h3>
+                        <div class="filter-buttons">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="completed">Completed</button>
+                            <button class="filter-btn" data-filter="pending">Pending</button>
+                            <button class="filter-btn" data-filter="failed">Failed</button>
+                        </div>
+                    </div>
+
+                    <div id="reviews-container" class="reviews-list">
+                        <!-- Reviews will be dynamically loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="history-view" class="view">
+                <div class="dashboard-header">
+                    <div>
+                        <h2>Review History</h2>
+                        <p class="subtitle">Browse all past code reviews and their results</p>
+                    </div>
+                </div>
+                <div id="history-container" class="history-list">
+                    <!-- History items will be loaded here -->
+                </div>
+            </div>
+
+            <div id="settings-view" class="view">
+                <div class="dashboard-header">
+                    <div>
+                        <h2>Settings</h2>
+                        <p class="subtitle">Configure your review preferences and agent settings</p>
+                    </div>
+                </div>
+                <div class="settings-container">
+                    <div class="settings-section">
+                        <h3>Agent Configuration</h3>
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" checked id="agent-security">
+                                <span>Security Agent</span>
+                            </label>
+                            <p class="setting-description">Analyzes code for security vulnerabilities</p>
+                        </div>
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" checked id="agent-performance">
+                                <span>Performance Agent</span>
+                            </label>
+                            <p class="setting-description">Reviews code for performance optimizations</p>
+                        </div>
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" checked id="agent-style">
+                                <span>Style Agent</span>
+                            </label>
+                            <p class="setting-description">Checks code style and best practices</p>
+                        </div>
+                    </div>
+                    <div class="settings-section">
+                        <h3>Notification Preferences</h3>
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" checked id="notify-complete">
+                                <span>Review Complete</span>
+                            </label>
+                            <p class="setting-description">Notify when a review is completed</p>
+                        </div>
+                        <div class="setting-item">
+                            <label>
+                                <input type="checkbox" id="notify-critical">
+                                <span>Critical Issues</span>
+                            </label>
+                            <p class="setting-description">Notify when critical issues are found</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="review-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Review Details</h3>
+                    <button class="close-btn" id="close-modal">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <!-- Review details will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+        <div id="new-review-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Create New Review</h3>
+                    <button class="close-btn" id="close-new-review-modal">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="new-review-form">
+                        <div class="form-group">
+                            <label for="review-title">Review Title</label>
+                            <input type="text" id="review-title" placeholder="e.g., Feature/user-authentication" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="review-description">Description</label>
+                            <textarea id="review-description" rows="3" placeholder="Describe what needs to be reviewed..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="code-input">Code to Review</label>
+                            <textarea id="code-input" rows="10" placeholder="Paste your code here..." required></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" id="cancel-new-review">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Start Review</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
