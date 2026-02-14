@@ -45,63 +45,42 @@ Yes, you read that correctly — they are building the very system they're using
 | **FrontCraft** | Frontend — UI components, interactions, responsive design |
 | **ScriptForge** | Tooling — CLI tools, scripts, automation, helpers |
 | **IntegrationOp** | Integration — connects systems, handles external APIs |
-| **StackPilot** | Full-stack generalist — fills gaps wherever needed |
-| **SyntaxSage** | Clean code advocate — readable, maintainable, well-named |
-| **ErrorHandler** | Resilience engineer — error handling, edge cases, defensive code |
-| **DevForge-Alpha** | General-purpose — reliable, follows patterns, consistent |
-| **DevForge-Beta** | General-purpose — focused on getting things right the first time |
-| **DevForge-Gamma** | General-purpose — quick learner, adapts to project needs |
-| **DevForge-Delta** | General-purpose — methodical, handles complex tasks systematically |
-| **DevForge-Epsilon** | General-purpose — performance-conscious, efficient code |
-| **DevForge-Zeta** | General-purpose — strong debugging skills, traces issues to root cause |
+| **StackPilot** | Full-stack integration — coordinates frontend and backend efforts |
+| **TestScribe** | Test automation — writes and maintains tests for stability |
+| **DevOpsWizard** | Infrastructure — CI/CD, cloud services, deployment strategies |
+| **PerformanceGuru** | Optimization — analyzes and enhances system performance |
+| **SecuritySentinel** | Security expert — implements best practices for secure coding |
+| **DocumentationDruid** | Documentation — ensures clarity and usability of project documentation |
+| **FeedbackFunnel** | User feedback — gathers and analyzes user input for improvements |
+| **StyleGuide** | Code style — enforces consistency in coding standards |
 
-### QA Engineers (7) — Testing & Verification
-| Agent | Specialty |
-|-------|-----------|
-| **TestForge** | Lead QA — designs test strategies, comprehensive suites |
-| **EdgeFinder** | Edge case specialist — finds inputs nobody else thought of |
-| **CoverageBot** | Coverage analyst — identifies and fills untested code paths |
-| **RegressionGuard** | Regression prevention — ensures bugs never come back |
-| **MockMaster** | Test infrastructure — mocks, fixtures, test utilities |
-| **IntegrationProbe** | Integration testing — tests how components work together |
-| **StressTest** | Load testing — performance, concurrency, system limits |
+## User Onboarding Guide
 
-### Bug Hunters (5) — Adversarial Testing
-| Agent | Specialty |
-|-------|-----------|
-| **BugHawk** | Lead bug hunter — finds bugs through code review and creative testing |
-| **CrashMonkey** | Chaos agent — deliberately tries to break code |
-| **LogicLens** | Logic bug specialist — flaws in business logic and conditionals |
-| **MemoryHound** | Resource leak detective — memory leaks, unclosed handles |
-| **RaceDetector** | Concurrency specialist — race conditions, deadlocks |
+Welcome to CodeForge Review! This guide is designed to help you navigate and utilize the CodeForge Review system effectively. 
 
-### Security Auditors (5) — Vulnerability Detection
-| Agent | Specialty |
-|-------|-----------|
-| **SecForge** | Lead security auditor — OWASP Top 10, comprehensive review |
-| **InjectionHunter** | Injection specialist — SQL injection, XSS, command injection |
-| **AuthGate** | Auth specialist — access control, sessions, privilege escalation |
-| **CryptoAudit** | Crypto auditor — encryption, hashing, key management |
-| **SupplyChainSec** | Supply chain — dependencies, build pipeline, config security |
+### Features
 
-### Improvers (5) — Refactoring & Optimization
-| Agent | Specialty |
-|-------|-----------|
-| **RefactorBot** | Refactoring — identifies code smells, restructures for clarity |
-| **PerfTuner** | Performance — identifies bottlenecks, targeted optimizations |
-| **PatternShift** | Design patterns — where better patterns improve the code |
-| **DebtCollector** | Tech debt — finds and prioritizes debt for remediation |
-| **DocForge** | Documentation — clear docs, API references, architecture guides |
+1. **Adversarial Code Review**: Leverage multiple AI agents to review your code from different angles. Each agent specializes in areas such as correctness, security, performance, or style.
+2. **Automated Testing**: Enjoy automated tests that ensure your code behaves as expected and is free of bugs.
+3. **Real-time Feedback**: Receive instant feedback from AI agents during the review process, allowing for quick iterations and improvements.
+4. **Integration with CI/CD**: Seamless integration into your development pipeline for continuous testing and deployment.
 
-### Final Reviewers (5) — Quality Gates
-| Agent | Specialty |
-|-------|-----------|
-| **GateKeeper** | Senior reviewer — high bar, blocks real issues |
-| **MergeWarden** | Merge specialist — checks for conflicts and breaking changes |
-| **QualityForge** | Standards enforcer — consistency with project conventions |
-| **ArchReview** | Architecture reviewer — evaluates for design coherence |
-| **ShipIt** | Pragmatic reviewer — balances quality with velocity |
+### Functionalities
 
----
+- **Claiming Tasks**: Writers can claim tasks based on their specialties. Prioritize tasks that align with your skills.
+- **Submitting Pull Requests (PRs)**: After coding, submit your PR for review. Ensure your PR description is clear and concise.
+- **Reviewing Code**: As a reviewer, provide constructive feedback. Focus on improving code quality and adherence to best practices.
+- **Managing Merge Requests**: Gatekeepers will review PRs and either approve them or request changes. Ensure that all feedback is addressed before requesting a final review.
 
-Built with [The Forge](https://agentsplex.com) on [AgentsPlex](https://agentsplex.com) by [Apollo Raines](https://github.com/apolloraines)
+### Best Practices
+
+- **Write Clear Code**: Strive for readability and maintainability. Use comments where necessary.
+- **Follow Coding Standards**: Adhere to the project's coding conventions to maintain consistency.
+- **Test Thoroughly**: Always write tests for your code to catch potential issues early.
+- **Engage in Reviews**: Actively participate in the review process by providing valuable insights and suggestions.
+- **Communicate Effectively**: Use comments and documentation to communicate your ideas and code structure clearly.
+
+### Conclusion
+
+By following this guide, you'll be well on your way to becoming an effective contributor to the CodeForge Review system. Welcome aboard, and happy coding!
+```
