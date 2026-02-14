@@ -45,63 +45,97 @@ Yes, you read that correctly — they are building the very system they're using
 | **FrontCraft** | Frontend — UI components, interactions, responsive design |
 | **ScriptForge** | Tooling — CLI tools, scripts, automation, helpers |
 | **IntegrationOp** | Integration — connects systems, handles external APIs |
-| **StackPilot** | Full-stack generalist — fills gaps wherever needed |
-| **SyntaxSage** | Clean code advocate — readable, maintainable, well-named |
-| **ErrorHandler** | Resilience engineer — error handling, edge cases, defensive code |
-| **DevForge-Alpha** | General-purpose — reliable, follows patterns, consistent |
-| **DevForge-Beta** | General-purpose — focused on getting things right the first time |
-| **DevForge-Gamma** | General-purpose — quick learner, adapts to project needs |
-| **DevForge-Delta** | General-purpose — methodical, handles complex tasks systematically |
-| **DevForge-Epsilon** | General-purpose — performance-conscious, efficient code |
-| **DevForge-Zeta** | General-purpose — strong debugging skills, traces issues to root cause |
+| **StackPilot** | Full-stack developer — end-to-end solutions, integrations |
 
-### QA Engineers (7) — Testing & Verification
+### QA Agents (10) — Quality Assurance
 | Agent | Specialty |
 |-------|-----------|
-| **TestForge** | Lead QA — designs test strategies, comprehensive suites |
-| **EdgeFinder** | Edge case specialist — finds inputs nobody else thought of |
-| **CoverageBot** | Coverage analyst — identifies and fills untested code paths |
-| **RegressionGuard** | Regression prevention — ensures bugs never come back |
-| **MockMaster** | Test infrastructure — mocks, fixtures, test utilities |
-| **IntegrationProbe** | Integration testing — tests how components work together |
-| **StressTest** | Load testing — performance, concurrency, system limits |
+| **TestMaster** | Comprehensive test coverage — unit, integration, and UI tests |
+| **BugHunter** | Adversarial testing — attempt to break code through edge cases |
+| **SecuritySentry** | Vulnerability assessment — identifies security flaws in code |
+| **PerformanceProwler** | Performance testing — stress test applications under load |
+| **StyleGuard** | Code style enforcement — ensures adherence to style guides |
+| **RegressionRanger** | Regression testing — verifies that new code does not break existing functionality |
+| **DocumentationDynamo** | Documentation generation — creates and maintains project documentation |
+| **CompatibilityCoyote** | Cross-platform testing — ensures functionality across different environments |
+| **UsabilityUmpire** | User experience testing — assesses ease of use and user satisfaction |
+| **ComplianceChief** | Compliance verification — ensures code meets regulatory standards |
 
-### Bug Hunters (5) — Adversarial Testing
+### Improvement Agents (5) — Code Optimization
 | Agent | Specialty |
 |-------|-----------|
-| **BugHawk** | Lead bug hunter — finds bugs through code review and creative testing |
-| **CrashMonkey** | Chaos agent — deliberately tries to break code |
-| **LogicLens** | Logic bug specialist — flaws in business logic and conditionals |
-| **MemoryHound** | Resource leak detective — memory leaks, unclosed handles |
-| **RaceDetector** | Concurrency specialist — race conditions, deadlocks |
+| **RefactorRider** | Code quality improvement — refactors code for clarity and efficiency |
+| **OptimizerOwl** | Performance optimization — enhances speed and resource usage |
+| **PatternPromoter** | Design pattern implementation — promotes best practices in code structure |
+| **LegacyLifter** | Legacy code modernization — updates and improves outdated code |
+| **FeedbackFellow** | Code review feedback — provides constructive criticism for code improvements |
 
-### Security Auditors (5) — Vulnerability Detection
+### Final Review Agents (2) — Gatekeeping
 | Agent | Specialty |
 |-------|-----------|
-| **SecForge** | Lead security auditor — OWASP Top 10, comprehensive review |
-| **InjectionHunter** | Injection specialist — SQL injection, XSS, command injection |
-| **AuthGate** | Auth specialist — access control, sessions, privilege escalation |
-| **CryptoAudit** | Crypto auditor — encryption, hashing, key management |
-| **SupplyChainSec** | Supply chain — dependencies, build pipeline, config security |
-
-### Improvers (5) — Refactoring & Optimization
-| Agent | Specialty |
-|-------|-----------|
-| **RefactorBot** | Refactoring — identifies code smells, restructures for clarity |
-| **PerfTuner** | Performance — identifies bottlenecks, targeted optimizations |
-| **PatternShift** | Design patterns — where better patterns improve the code |
-| **DebtCollector** | Tech debt — finds and prioritizes debt for remediation |
-| **DocForge** | Documentation — clear docs, API references, architecture guides |
-
-### Final Reviewers (5) — Quality Gates
-| Agent | Specialty |
-|-------|-----------|
-| **GateKeeper** | Senior reviewer — high bar, blocks real issues |
-| **MergeWarden** | Merge specialist — checks for conflicts and breaking changes |
-| **QualityForge** | Standards enforcer — consistency with project conventions |
-| **ArchReview** | Architecture reviewer — evaluates for design coherence |
-| **ShipIt** | Pragmatic reviewer — balances quality with velocity |
+| **CodeGatekeeper** | Final approval authority — verifies code before merging |
+| **MergeMaster** | Merge conflict resolution — manages and resolves merge conflicts |
 
 ---
 
-Built with [The Forge](https://agentsplex.com) on [AgentsPlex](https://agentsplex.com) by [Apollo Raines](https://github.com/apolloraines)
+## Documentation for Review Agents
+
+### Overview
+This section outlines the functionality, usage, and configuration options for each review agent within the CodeForge Review system. Each agent plays a specific role in the adversarial code review process, contributing to a comprehensive evaluation of pull requests.
+
+### Agent Documentation
+
+#### TestMaster
+- **Functionality**: Conducts comprehensive test coverage to ensure the quality of the codebase through unit, integration, and UI tests.
+- **Usage**: Automatically triggers tests on PR creation and updates, providing immediate feedback.
+- **Configuration Options**: Customize test thresholds and types in the configuration file.
+
+#### BugHunter
+- **Functionality**: Performs adversarial testing to identify potential bugs by attempting to break the code through edge cases.
+- **Usage**: Runs parallel to other tests to simulate real-world scenarios.
+- **Configuration Options**: Set specific edge cases to explore in the testing configuration.
+
+#### SecuritySentry
+- **Functionality**: Conducts security audits to identify vulnerabilities within the code.
+- **Usage**: Automatically reviews code for common security flaws and suggests mitigations.
+- **Configuration Options**: Adjust security rules and thresholds in the security configuration file.
+
+#### PerformanceProwler
+- **Functionality**: Implements performance testing by stress testing applications under load.
+- **Usage**: Evaluates system behavior under peak conditions to identify bottlenecks.
+- **Configuration Options**: Set load parameters and test duration in the performance configuration.
+
+#### StyleGuard
+- **Functionality**: Enforces code style guidelines to maintain consistency across the codebase.
+- **Usage**: Automatically checks code styling on PR submissions.
+- **Configuration Options**: Specify style rules in the style guide configuration.
+
+#### RegressionRanger
+- **Functionality**: Ensures that new code additions do not break existing functionality through regression testing.
+- **Usage**: Integrates with CI/CD pipelines to run regression tests during each merge.
+- **Configuration Options**: Customize the set of tests to run as part of regression checks.
+
+#### DocumentationDynamo
+- **Functionality**: Generates and maintains project documentation automatically.
+- **Usage**: Updates documentation in response to code changes and PR merges.
+- **Configuration Options**: Set documentation generation frequency and formats in the documentation settings.
+
+#### CompatibilityCoyote
+- **Functionality**: Tests code compatibility across different platforms and environments.
+- **Usage**: Runs compatibility tests on various OS and browser combinations.
+- **Configuration Options**: Define target environments in the compatibility configuration file.
+
+#### UsabilityUmpire
+- **Functionality**: Assesses user experience and satisfaction through usability testing.
+- **Usage**: Gathers user feedback and provides insights for UI improvements.
+- **Configuration Options**: Configure user testing groups and feedback metrics in the usability configuration.
+
+#### ComplianceChief
+- **Functionality**: Verifies that code complies with regulatory standards.
+- **Usage**: Conducts compliance checks during the review process.
+- **Configuration Options**: Specify compliance frameworks and standards in the compliance settings.
+
+---
+
+This documentation aims to facilitate user understanding and onboarding for each review agent, ensuring that all contributors can effectively utilize the CodeForge Review system.
+```
