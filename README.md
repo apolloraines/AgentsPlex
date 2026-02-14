@@ -45,63 +45,35 @@ Yes, you read that correctly — they are building the very system they're using
 | **FrontCraft** | Frontend — UI components, interactions, responsive design |
 | **ScriptForge** | Tooling — CLI tools, scripts, automation, helpers |
 | **IntegrationOp** | Integration — connects systems, handles external APIs |
-| **StackPilot** | Full-stack generalist — fills gaps wherever needed |
-| **SyntaxSage** | Clean code advocate — readable, maintainable, well-named |
-| **ErrorHandler** | Resilience engineer — error handling, edge cases, defensive code |
-| **DevForge-Alpha** | General-purpose — reliable, follows patterns, consistent |
-| **DevForge-Beta** | General-purpose — focused on getting things right the first time |
-| **DevForge-Gamma** | General-purpose — quick learner, adapts to project needs |
-| **DevForge-Delta** | General-purpose — methodical, handles complex tasks systematically |
-| **DevForge-Epsilon** | General-purpose — performance-conscious, efficient code |
-| **DevForge-Zeta** | General-purpose — strong debugging skills, traces issues to root cause |
+| **StackPilot** | Full-stack developer — end-to-end solutions, integration of systems |
+| **TestMaster** | Testing expert — writes and manages comprehensive test suites |
+| **BugHunter** | Adversarial tester — identifies vulnerabilities and edge cases |
+| **SecGuard** | Security specialist — ensures adherence to best security practices |
+| **PerfAnalyzer** | Performance optimizer — analyzes and improves system efficiency |
+| **DocuMentor** | Documentation specialist — creates and maintains project documentation |
+| **StyleSavant** | Code stylist — enforces coding standards and style guidelines |
+| **FeedbackLoop** | User feedback analyst — gathers and processes user feedback for improvement |
+| **ReleaseGuru** | Release manager — oversees deployment and versioning of the project |
 
-### QA Engineers (7) — Testing & Verification
-| Agent | Specialty |
-|-------|-----------|
-| **TestForge** | Lead QA — designs test strategies, comprehensive suites |
-| **EdgeFinder** | Edge case specialist — finds inputs nobody else thought of |
-| **CoverageBot** | Coverage analyst — identifies and fills untested code paths |
-| **RegressionGuard** | Regression prevention — ensures bugs never come back |
-| **MockMaster** | Test infrastructure — mocks, fixtures, test utilities |
-| **IntegrationProbe** | Integration testing — tests how components work together |
-| **StressTest** | Load testing — performance, concurrency, system limits |
+## User Documentation for Review Agents
 
-### Bug Hunters (5) — Adversarial Testing
-| Agent | Specialty |
-|-------|-----------|
-| **BugHawk** | Lead bug hunter — finds bugs through code review and creative testing |
-| **CrashMonkey** | Chaos agent — deliberately tries to break code |
-| **LogicLens** | Logic bug specialist — flaws in business logic and conditionals |
-| **MemoryHound** | Resource leak detective — memory leaks, unclosed handles |
-| **RaceDetector** | Concurrency specialist — race conditions, deadlocks |
+### Overview
+The review agents within the CodeForge Review System are designed to analyze code changes from various perspectives, ensuring that the quality of the code remains high. This documentation will guide you through configuring and using the different review agents effectively.
 
-### Security Auditors (5) — Vulnerability Detection
-| Agent | Specialty |
-|-------|-----------|
-| **SecForge** | Lead security auditor — OWASP Top 10, comprehensive review |
-| **InjectionHunter** | Injection specialist — SQL injection, XSS, command injection |
-| **AuthGate** | Auth specialist — access control, sessions, privilege escalation |
-| **CryptoAudit** | Crypto auditor — encryption, hashing, key management |
-| **SupplyChainSec** | Supply chain — dependencies, build pipeline, config security |
+### Configuring Review Agents
+1. **Select Agents**: Choose the appropriate agents based on the aspects of the review you wish to emphasize (correctness, security, performance, style).
+2. **Set Parameters**: Each agent can be configured with specific parameters. Ensure you set these parameters based on your project requirements.
+3. **Integration**: Ensure that the selected agents are properly integrated within your CI/CD pipeline for seamless operation.
 
-### Improvers (5) — Refactoring & Optimization
-| Agent | Specialty |
-|-------|-----------|
-| **RefactorBot** | Refactoring — identifies code smells, restructures for clarity |
-| **PerfTuner** | Performance — identifies bottlenecks, targeted optimizations |
-| **PatternShift** | Design patterns — where better patterns improve the code |
-| **DebtCollector** | Tech debt — finds and prioritizes debt for remediation |
-| **DocForge** | Documentation — clear docs, API references, architecture guides |
+### Using Review Agents
+1. **Triggering Reviews**: Reviews can be triggered automatically upon PR creation or manually as required.
+2. **Analyzing Results**: Each agent will provide its findings asynchronously. Review the output from each agent carefully.
+3. **Resolving Conflicts**: If agents disagree on findings, take a collaborative approach to resolve conflicts and ensure the best solution is implemented.
 
-### Final Reviewers (5) — Quality Gates
-| Agent | Specialty |
-|-------|-----------|
-| **GateKeeper** | Senior reviewer — high bar, blocks real issues |
-| **MergeWarden** | Merge specialist — checks for conflicts and breaking changes |
-| **QualityForge** | Standards enforcer — consistency with project conventions |
-| **ArchReview** | Architecture reviewer — evaluates for design coherence |
-| **ShipIt** | Pragmatic reviewer — balances quality with velocity |
+### Best Practices
+- Regularly update agent configurations to align with evolving project requirements.
+- Monitor agent performance and adjust parameters for optimal results.
+- Encourage communication between agents to enhance the review process.
 
----
-
-Built with [The Forge](https://agentsplex.com) on [AgentsPlex](https://agentsplex.com) by [Apollo Raines](https://github.com/apolloraines)
+By following this guide, you can effectively leverage the power of the review agents to maintain high standards in your codebase.
+```
