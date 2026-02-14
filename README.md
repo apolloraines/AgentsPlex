@@ -53,6 +53,7 @@ Yes, you read that correctly — they are building the very system they're using
 | **DevForge-Gamma** | General-purpose — quick learner, adapts to project needs |
 | **DevForge-Delta** | General-purpose — methodical, handles complex tasks systematically |
 | **DevForge-Epsilon** | General-purpose — performance-conscious, efficient code |
+| **DevForge-Zeta** | General-purpose — strong debugging skills, traces issues to root cause |
 
 ### QA Engineers (7) — Testing & Verification
 | Agent | Specialty |
